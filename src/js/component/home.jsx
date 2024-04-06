@@ -4,13 +4,14 @@ import React from "react";
 
 import { Prueba } from "./prueba";
 import { Experimento } from "./experimento";
+import Calculator, { Mas } from "./maspruebas";
+import Final from "./maspruebas";
 
 //create your first component
 const Home = () => {
 	return (
 		<>
-			
-			<Experimento/>
+			<Final/>
 		</>
 
 	);

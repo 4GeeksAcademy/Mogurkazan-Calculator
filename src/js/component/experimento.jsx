@@ -1,22 +1,16 @@
 import React, {useState} from "react";
 
 export const Experimento = () => {
-    const [impri, setImpri] = useState('');
-    
-    const handleClicNum = (numero) => {
-        setImpri(impri + numero)
-    };
-    const handleClicOperator = (operator) => {
-        setImpri(impri + operator)
-    };
+    const [value, setValue] = useState('');
+   
     
     return (
         <>
-            <h1>{impri}</h1>
-            <button onClick={() => handleClicNum('1')}>1</button>
-            <button onClick={() => handleClicNum('2')}>2</button>
-            <button onClick={() => handleClicOperator('+')}>+</button>
-            <button>=</button>
+            <input type= "text" value={value}/>
+            <input type="button" value="1" onClick={e => setValue(value + e.target.value)}/>
+            <input type="button" value="2" onClick={e => setValue(value + e.target.value)}/>
+            <input type="button" value="+" onClick={e => setValue(value + e.target.value)}/>
+            <input type="button" value="=" className='equal' onClick={e => setValue(eval(value))}/>
         </>
     )
 }
